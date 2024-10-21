@@ -4,6 +4,13 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Todo from "./pages/Todo.jsx";
 import App from "./App.jsx";
 import Weather from "./pages/Weather.jsx";
+import { createTheme, ThemeProvider } from "@mui/material";
+
+const theme = createTheme({
+  typography: {
+    fontFamily: ["Montserrat"].join(","),
+  },
+});
 
 const router = createBrowserRouter([
   {
@@ -21,5 +28,7 @@ const router = createBrowserRouter([
 ]);
 
 createRoot(document.getElementById("root")).render(
-  <RouterProvider router={router} />
+  <ThemeProvider theme={theme}>
+    <RouterProvider router={router} />
+  </ThemeProvider>
 );
