@@ -123,3 +123,8 @@ body {
 .Todo__H {
   font-size: 50px;
 }
+
+.Nav{
+  display: flex;
+  justify-content: space-between;
+}
