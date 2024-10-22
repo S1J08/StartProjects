@@ -1,11 +1,18 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Button from "../components/Ui/Button/Button";
 import Input from "../components/Ui/Input/Input";
 import TodoItem from "../components/TodoItem/TodoItem";
 
 const Todo = () => {
   const [value, setValue] = useState("");
-  const [todo, setTodo] = useState([]);
+  const [todo, setTodo] = useState(
+    JSON.parse(localStorage.getItem("todo")) || []
+  );
+
+  useEffect(() => {
+    localStorage.setItem("todo", JSON.stringify(todo));
+    console.log("first")
+  }, [todo]);
 
   function handleKeyDown(event) {
     if (event.key === "Enter") {
@@ -32,6 +39,7 @@ const Todo = () => {
           value={value}
           setValue={setValue}
           handleKeyDown={handleKeyDown}
+          placeholder={"Добавь новые заметки"}
         />
 
         <Button type="primary" click={addTodo}>

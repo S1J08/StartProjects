@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 /* Reset and base styles  */
 * {
@@ -111,10 +111,10 @@ legend {
   display: block;
 }
 body {
-  font-family: "Caveat", cursive;
+  font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
-  font-style: normal;
   font-weight: 400;
+  font-style: normal;
 }
 .TodoSSection {
   text-align: center;
@@ -122,4 +122,9 @@ body {
 }
 .Todo__H {
   font-size: 50px;
+}
+
+.Nav{
+  display: flex;
+  justify-content: space-between;
 }

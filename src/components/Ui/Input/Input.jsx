@@ -1,6 +1,6 @@
 import style from "./input.module.css";
 
-const Input = ({ value, setValue,handleKeyDown }) => {
+const Input = ({ value, setValue,handleKeyDown, placeholder }) => {
   return (
     <div>
       <input
@@ -9,6 +9,7 @@ const Input = ({ value, setValue,handleKeyDown }) => {
         value={value}
         onChange={(event) => setValue(event.target.value)}
         onKeyDown={handleKeyDown}
+        placeholder={placeholder}
       />
     </div>
   );
